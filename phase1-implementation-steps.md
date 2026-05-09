@@ -15,24 +15,24 @@ Each step is a shippable increment. Complete and manually verify before moving t
 - [x] Add `.gitignore` entries for `.env*`, `__pycache__`, `.next`, `node_modules`.
 
 ### 1.2 Supabase project
-- [ ] Create Supabase project via dashboard.
-- [ ] Note `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_JWT_SECRET`.
-- [ ] Enable email magic link auth in Supabase dashboard (disable email confirmation for local dev).
+- [x] Create Supabase project via dashboard.
+- [x] Note `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_JWT_SECRET`.
+- [x] Enable email magic link auth in Supabase dashboard (disable email confirmation for local dev).
 
 ### 1.3 Database migrations
-- [ ] Create `backend/migrations/001_initial.sql` with all tables and indexes from the data model:
+- [x] Create `backend/migrations/001_initial.sql` with all tables and indexes from the data model:
   - `profiles`, `notion_connections`, `sources`, `tags`, `source_tags`, `notion_sync_jobs`
-- [ ] Enable RLS on every user-owned table.
-- [ ] Add a Supabase function/trigger to auto-insert a `profiles` row on `auth.users` insert.
-- [ ] Run migration against the Supabase project.
+- [x] Enable RLS on every user-owned table.
+- [x] Add a Supabase function/trigger to auto-insert a `profiles` row on `auth.users` insert.
+- [x] Run migration against the Supabase project.
 
 ### 1.4 FastAPI skeleton
-- [ ] Add dependencies: `fastapi`, `uvicorn`, `httpx`, `python-jose[cryptography]`, `asyncpg`, `python-dotenv`.
-- [ ] Implement `app/main.py` with app factory, CORS, lifespan.
-- [ ] Implement `app/config.py` loading env vars with validation.
-- [ ] Implement `app/db.py` with asyncpg connection pool (init/close in lifespan).
-- [ ] Add `GET /healthz` returning `{"status": "ok"}`.
-- [ ] Smoke-test: `uvicorn app.main:app --reload` returns 200 on `/healthz`.
+- [x] Add dependencies: `fastapi`, `uvicorn`, `httpx`, `python-jose[cryptography]`, `asyncpg`, `python-dotenv`.
+- [x] Implement `app/main.py` with app factory, CORS, lifespan.
+- [x] Implement `app/config.py` loading env vars with validation.
+- [x] Implement `app/db.py` with asyncpg connection pool (init/close in lifespan).
+- [x] Add `GET /healthz` returning `{"status": "ok"}`.
+- [x] Smoke-test: `uvicorn app.main:app --reload` returns 200 on `/healthz`.
 
 ### 1.5 Docker Compose
 - [ ] Add `docker-compose.yml` with `backend` service (FastAPI) and `frontend` service (Next.js dev server).
